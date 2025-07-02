@@ -5,7 +5,6 @@ function clockComponent(props){
     return(     
         <div className="clock">
             <h2>{props.city}</h2>
-            <h4>{props.country}</h4>
             <h1>{props.time}</h1>
             <h6>{props.zone}</h6>
         </div>
