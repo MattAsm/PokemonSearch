@@ -5,10 +5,10 @@ import ClockComponent from './Clock-Component';
 function App() {
   return(
   <div className="clockHolder">
-    <ClockComponent />
-    <ClockComponent />  
-    <ClockComponent />
-    <ClockComponent />
+    <ClockComponent city="Toronto" country="Canada" time="12:00:00" zone="EST"/>
+    <ClockComponent city="Toronto" country="Canada" time="12:00:00" zone="EST"/>  
+    <ClockComponent city="Toronto" country="Canada" time="12:00:00" zone="EST"/>
+    <ClockComponent city="Toronto" country="Canada" time="12:00:00" zone="EST"/>
   </div>
   );
 }
