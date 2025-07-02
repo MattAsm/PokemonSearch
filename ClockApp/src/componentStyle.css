@@ -1,0 +1,5 @@
+.clock{
+    border: 1px solid white;
+    width:fit-content;/*This will change to best looking component when I test things.. same with height*/
+    height:fit-content;
+}
