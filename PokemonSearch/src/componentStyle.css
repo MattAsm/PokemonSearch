@@ -1,7 +1,8 @@
-.clock{
+.pkmn{
     border: 1px solid white;
     width:fit-content;/*This will change to best looking component when I test things.. same with height*/
-    height:fit-content;
+    height:230px;
     text-align: center;
     margin: 20px;
+    padding: 10px;
 }

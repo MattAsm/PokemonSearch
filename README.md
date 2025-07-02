@@ -1,1 +1,1 @@
-Will be a react based website, designed as a portfolio piece 
+Will be a react based website, designed as a portfolio piece
