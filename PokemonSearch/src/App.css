@@ -3,15 +3,47 @@ body{
     color: white;
     font-family:Arial, Helvetica, sans-serif;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .pkmnHolder{
     border: 2px solid orange;
     display: flex;
     flex-flow: wrap;
-    width: 75vw;
+    width:fit-content;
     height:fit-content;
+    min-width: 150px;
+    min-height: 290px;
+}
+
+
+.addPokemon{
+    border: 1px solid white;
+    width:fit-content;/*This will change to best looking component when I test things.. same with height*/
+    height:230px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addPokemon:hover{
+    cursor:pointer;
+}
+
+.addPokemon h3{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.searchPkmn{
+    background-color: rgb(153, 153, 153);
+    display:block;
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
 }
