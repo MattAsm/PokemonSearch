@@ -1,1 +1,3 @@
-Will be a react based website, designed as a portfolio piece
+A react based website showcasing fetching from an api and organizing the data recieved. 
+
+https://mattasm.github.io/PokemonSearch/
