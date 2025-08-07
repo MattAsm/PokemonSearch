@@ -13,9 +13,9 @@ function PokemonComponent(props){
         .then(data => {
             setPkmnName(data.name.charAt(0).toUpperCase() + data.name.slice(1));
             setSprite(data.sprites.front_default);
-            setTypes(data.types[0].type.name.charAt(0).toUpperCase() + data.types[0].type.name.slice(1) + " "); //Sets and capitalizes, could be more readable with 2 or 3 lines but i prefer it this way for now
+            setTypes(data.types[0].type.name.charAt(0).toUpperCase() + data.types[0].type.name.slice(1) + " ");
             if(data.types.length === 2){
-                setTypes(firstType => [...firstType, data.types[1].type.name.charAt(0).toUpperCase() + data.types[1].type.name.slice(1) + " "]);
+                setTypes(firstType => [...firstType, "/ ", data.types[1].type.name.charAt(0).toUpperCase() + data.types[1].type.name.slice(1)]);
             }
         })
         .catch(error => {
@@ -26,7 +26,7 @@ function PokemonComponent(props){
     return(     
     <div className="pkmn">
         <h2>{pkmnName}</h2>
-        <img src={sprite} alt="" />
+        <img src={sprite} alt="" height="96px" />
         <h6>{pkmnTypes}</h6>
     </div>
     );

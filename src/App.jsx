@@ -19,25 +19,24 @@ const handleSearch = () =>
 }
 
   return(<>
+  <h1 id='title'>Pokémon Search</h1>
    <div id="searchBarDiv">
-      <input type="text" placeholder='Name' id="nameSearch"/>
-{/* <select name="type1" id="type1">
-        <option value="">Type</option>
-        {fillTypes()}
-      </select>
+      <input type="text" placeholder='Pokémon Name:' id="nameSearch"
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          document.getElementById('search')?.click();
+        }
+      }} />
 
-      <select name="type2" id="type2">
-        <option value="">Type</option>
-        {fillTypes()}
-      </select>
-*/}
-      <button id="search" onClick={() => handleSearch()}>SEARCH</button>
+      <button id="search" onClick={() => handleSearch()} >SEARCH</button>
     </div>
 
   <div className="pkmnHolder">
-    {searchArr.map(pkmn => (
-      <PokemonComponent key={pkmn.name} api={`https://pokeapi.co/api/v2/pokemon/${pkmn.name}`} />
-    ))}
+    {searchArr.length === 0 ? 
+    (<PokemonComponent key={1} api={`https://pokeapi.co/api/v2/pokemon/pikachu`} />) : (
+    searchArr.map(pkmn => ( <PokemonComponent key={pkmn.name} api={`https://pokeapi.co/api/v2/pokemon/${pkmn.name}`} />))
+   )}
+
   </div>
   </>);
 }
@@ -45,6 +44,8 @@ const handleSearch = () =>
 export default App
 
 
+
+//For unreleased feature... might not add
 function fillTypes(){
   const types = ["Normal", "Fire", "Water", "Grass", "Flying", "Fighting", "Poison", "Electric", "Ground", "Rock", "Psychic", "Ice", "Bug", "Ghost", "Steel", "Dragon", "Dark", "Fairy"];
 

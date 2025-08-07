@@ -5,14 +5,24 @@ body{
     height: 100vh;
 }
 
+#title{
+    color:#f7c601;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family:cursive;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-skip-ink: none;
+    text-decoration-color: #e61a23;
+}
+
 .pkmnHolder{
-    border: 2px solid orange;
     display: flex;
     flex-flow: wrap;
     width:fit-content;
     height:fit-content;
-    min-width: 150px;
-    min-height: 290px;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 
@@ -57,6 +67,9 @@ body{
     margin: 15px;
     font-size: 15px;
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #searchBarDiv{
